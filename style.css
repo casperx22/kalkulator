@@ -1,0 +1,129 @@
+/* ==================================== */
+/* 1. Reset dan Latar Belakang (Body)   */
+/* ==================================== */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Latar belakang gelap khas Developer/GitHub */
+    background-color: #0d1117; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #c9d1d9; /* Teks putih keabu-abuan */
+}
+
+/* ==================================== */
+/* 2. Kontainer Kalkulator              */
+/* ==================================== */
+.calculator {
+    width: 280px; /* Sedikit dilebarkan */
+    /* Warna latar belakang kontainer, lebih terang dari body */
+    background-color: #161b22; 
+    border-radius: 10px;
+    /* Shadow yang halus */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border: 1px solid #30363d; /* Garis tepi tipis */
+}
+
+/* ==================================== */
+/* 3. Layar (Display)                   */
+/* ==================================== */
+#display {
+    width: 100%;
+    box-sizing: border-box;
+    height: 60px; /* Sedikit lebih tinggi */
+    margin-bottom: 20px;
+    font-size: 32px; /* Lebih besar */
+    text-align: right;
+    padding: 10px;
+    /* Latar belakang display sangat gelap */
+    background-color: #010409; 
+    color: #58a6ff; /* Warna teks biru neon/highlight */
+    border: none;
+    border-radius: 6px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ==================================== */
+/* 4. Layout Tombol (Button Grid)       */
+/* ==================================== */
+.button {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* ==================================== */
+/* 5. Tombol Angka/Default (btn)        */
+/* ==================================== */
+.btn {
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    /* Warna tombol default */
+    background-color: #21262d; 
+    color: #c9d1d9;
+    cursor: pointer;
+    font-size: 20px; /* Lebih besar */
+    transition: background-color 0.1s ease;
+}
+
+.btn:hover {
+    background-color: #30363d; /* Efek hover halus */
+}
+
+.btn:active {
+    background-color: #3e444b; /* Efek klik */
+}
+
+/* ==================================== */
+/* 6. Tombol Operator                   */
+/* ==================================== */
+.operator {
+    /* Warna hijau khas aksi GitHub/kontras */
+    background-color: #238636; 
+    color: white;
+}
+
+.operator:hover {
+    background-color: #2ea043;
+}
+
+.operator:active {
+    background-color: #216d2f;
+}
+
+/* Tombol Sama Dengan (=) yang mencolok */
+.operator[onclick="calculate()"] {
+    background-color: #58a6ff; /* Warna biru primer GitHub */
+    color: #0d1117; /* Teks gelap untuk kontras */
+    font-weight: bold;
+}
+
+.operator[onclick="calculate()"]:hover {
+    background-color: #79c0ff;
+}
+.operator[onclick="calculate()"]:active {
+    background-color: #4a8dcf;
+}
+
+
+/* ==================================== */
+/* 7. Tombol Hapus (Clear/Reset)        */
+/* ==================================== */
+.clear {
+    grid-column: span 4;
+    /* Warna merah untuk tombol reset/bahaya */
+    background-color: #da3633; 
+    color: white;
+}
+
+.clear:hover {
+    background-color: #f85149;
+}
+
+.clear:active {
+    background-color: #b32a26;
+}
