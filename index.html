@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculactor</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <div class="calculator">
+    <div class="calculator">
         <input type="text" id="display" disabled>
         <div class="button">
             <button class="btn" onclick="appendValue('7')">7</button>
@@ -24,9 +24,9 @@
             <button class="btn operator" onclick="appendValue('-')">-</button>
             <button class="btn" onclick="appendValue('0')">0</button>
             <button class="btn" onclick="appendValue('.')">.</button>
-            <button class="btn operator" onclick="calculator()">=</button>
-            <button class="btn operator" onclick="appendValue('+')">+</button>  
-            <button class="btn clear" onclick="clearDisplay()">reset</button> 
+            <button class="btn operator" onclick="calculate()">=</button>
+            <button class="btn operator" onclick="appendValue('+')">+</button> 
+            <button class="btn clear" onclick="clearDisplay()">AC</button> 
         </div>
     </div>
 
